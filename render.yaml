@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: acs-gestao-geral
+    env: node
+    plan: free
+    buildCommand: |
+      npm install --prefix backend
+      npm install --prefix frontend
+      npm run build --prefix frontend
+    startCommand: node backend/index.js
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: KEEPALIVE_INTERVAL_MS
+        value: "300000"
+jobs:
+  - type: cron
+    name: acs-keepalive
+    env: node
+    plan: free
+    schedule: "*/10 * * * *"
+    buildCommand: npm install --prefix backend
+    startCommand: node backend/scripts/ping.js
+    envVars:
+      - key: APP_URL
+        sync: false
