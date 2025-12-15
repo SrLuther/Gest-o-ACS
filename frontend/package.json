@@ -1,21 +1,21 @@
-{
-  "name": "acs-gestao-geral-frontend",
-  "version": "0.2.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0",
-    "@vitejs/plugin-react": "^4.3.2",
-    "vite": "^5.4.8"
-  },
-  "devDependencies": {
-    
-  }
+﻿{
+    "name":  "acs-gestao-geral-frontend",
+    "version":  "0.2.1",
+    "private":  true,
+    "type":  "module",
+    "scripts":  {
+                    "dev":  "vite",
+                    "build":  "vite build",
+                    "preview":  "vite preview"
+                },
+    "dependencies":  {
+                         "react":  "^18.3.1",
+                         "react-dom":  "^18.3.1",
+                         "react-router-dom":  "^6.28.0",
+                         "@vitejs/plugin-react":  "^4.3.2",
+                         "vite":  "^5.4.8"
+                     },
+    "devDependencies":  {
+
+                        }
 }
